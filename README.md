@@ -7,7 +7,10 @@
 - [ ] Check cross-platform compatibility
 - [ ] Add better user-facing error handling
 
-## Example: Creating a TOTP
+## Examples
+In addition to these examples, more information can be found via `otp help`.
+
+### Example: Creating a TOTP
 Secrets are base32 strings. 
 
 ```
@@ -16,14 +19,16 @@ Secrets are base32 strings.
   Wrote to github (nathan-yan). Cleaning up...
 ```
 
-## Example: Creating an EOTP
+### Example: Creating an EOTP
 ```
   ~ otp new some_website --event
   Secret: **************
   Wrote to some_website. Cleaning up...
 ```
 
-## Example: Displaying OTPs
+### Example: Displaying OTPs
+Results will update in-place (OTPs will refresh automatically, timers will decrease live, etc.)
+
 ```
   ~ otp show
 
@@ -39,6 +44,27 @@ Secrets are base32 strings.
 
     a: github (nathan-yan)
        123 456 · 25
+```
+
+### Example: Deleting OTPs
+```
+  ~ otp delete github
+  ? Are you sure you want to delete github? (y/N) y
+  Deleted github.
+```
+
+```
+  ~ otp delete digitalocean
+  There are multiple one time passwords with name digitalocean, which do you want to delete?
+
+    0: digitalocean
+    1: digitalocean (nathan-yan)
+
+  ? 0, 1
+  [Type a comma separated list of numbers]
+  ? Are you sure you want to delete digitalocean, digitalocean (nathan-yan)? (y/N) y
+  Deleted digitalocean.
+  Deleted digitalocean (nathan-yan).
 ```
 
 ## Copying a OTP
