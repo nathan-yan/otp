@@ -1,0 +1,28 @@
+[package]
+name = "otp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sha1 = "0.10.5"
+anyhow = "*"
+base32 = "0.4.0"
+rkv = "0.18.4"
+clap = {version = "4.2.3", features = ["derive", "error-context"]}
+shellexpand = "3.1.0"
+serde = {version = "1.0", features = ["derive"]} 
+serde_json = "1.0"
+rpassword = "7.2.0"
+crossterm = "0.26.1"
+secrets = "1.2.0"
+zeroize = "1.6.0"
+thiserror = "1.0.40"
+colored = "2.0.0"
+edit-distance = "2.1.0"
+inquire="0.6.1"
+keyring="2"
+textwrap = "0.16.0"
+copypasta = "0.8.2"
+libsodium-sys = "0.2.7"
