@@ -1,5 +1,5 @@
 # otp
-`otp` is a one time password manager in Rust, that can handle both Time (TOTP) and Event (EOTP) one time passwords.
+`otp` is a one time password manager in Rust that can handle both Time (TOTP) and Event (EOTP) one time passwords. It additionally contains customization for different password lengths (6 - 10 digits) and durations.
 
 ## TODOS
 - [ ] Add customization regarding import/export location
